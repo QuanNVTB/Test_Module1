@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số hoàn hảo</title>
+</head>
+<body>
+    <script>
+        function perfectNumber(){
+            let input = parseInt(prompt("Nhập vào số bạn muốn kiểm tra: "));
+            let total = 0;
+            for(let i = 1; i < input; i++){
+                if(input % i === 0){
+                    total += i;
+                }
+            }
+            if(total == input){
+                alert(`${input} là số hoàn hảo`)
+            }else{
+                alert(`${input} không phải là số hoàn hảo`)
+            }
+        }
+   perfectNumber();
+    </script>
+</body>
+</html>

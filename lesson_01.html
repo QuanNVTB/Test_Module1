@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Trung bình cộng 1 mảng số nguyên chia hết cho 3</title>
+</head>
+<body>
+    <script>
+        function inputArray(){
+            let input = prompt("Nhập vào số phần tử mảng(input<50 phần tử): ");
+            let arr = [];
+            if(input < 50){
+                for(let i = 0; i< input; i++){
+                    let val = parseInt(prompt(`Nhập vào phần tử thứ ${i+1} trong mảng: `));
+                    arr.push(val);
+                }
+            }else{
+                alert("Bạn nhập quá 50 phần tử. Hãy nhập lại cho đúng");
+            }
+            return arr;
+        }
+        function average(){
+            let total = 0;
+            let counterVariable = 0;
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] % 3 === 0){
+                    total += arr[i];
+                    counterVariable++;
+                }
+            }
+        if(counterVariable > 0){
+            let medium =  total / counterVariable;
+            console.log("Trung bình cộng của các số chia hết cho 3 là: " + medium);
+        }else{
+            console.log("Không số nào chia hết cho 3.")
+        }
+        }
+        let arr = inputArray();
+        if (arr.length > 0) {
+            console.log("Mảng vừa nhập là:", arr.join(", "));
+            average(arr);
+        }
+    </script>
+</body>
+</html>

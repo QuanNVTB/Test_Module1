@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý công nhân</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        margin: 20px;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #3498db;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e0f7fa;
+    }</style>
+
+</head>
+<body>
+    <h1>Quản lý công nhân</h1>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Họ Và Tên</th>
+        <th>Ngày Sinh</th>
+        <th>Địa Chỉ</th>
+        <th>Lương</th>
+        <th>Chức Vụ</th>
+    </tr>
+    </thead>
+    <tbody id = data></tbody>
+</table>
+    <script src="main.js"></script>
+</body>
+</html>

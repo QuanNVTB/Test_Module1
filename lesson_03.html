@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tháng/năm</title>
+</head>
+<body>
+  <script>
+    function myDate(){
+      let input = prompt("Nhập vào tháng và năm bạn muốn kiểm tra(tháng/năm): ")
+      let check = /^(0[1-9]|1[0-2])\/\d{4}$/;
+      if (!check.test(input)) {
+        alert("Sai định dạng ngày và năm. Vui lòng nhập theo MM/yyyy (VD: 02/2024).");
+        return;
+      }
+
+      const parts = input.split("/");
+      const month = parseInt(parts[0]);
+      const year = parseInt(parts[1]);
+      let days;
+
+      switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          days = 31;
+          break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          days = 30;
+          break;
+        case 2:
+          if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+            days = 29;
+          } else {
+            days = 28;
+          }
+          break;
+      }
+      alert(`${input} có số ngày là: ${days}`);
+    }
+    myDate();
+  </script>
+</body>
+</html>
